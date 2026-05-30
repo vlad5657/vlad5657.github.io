@@ -1,0 +1,9 @@
+{
+  "type": "chrome",
+  "request": "attach",
+  "name": "Attach to Yandex Browser",
+  "runtimeExecutable": "C:\\Users\\pc\\AppData\\Local\\Yandex\\YandexBrowser\\Application\\browser.exe",
+  "address": "localhost",
+  "port": 8080,
+  "webRoot": "${workspaceRoot}"
+}
