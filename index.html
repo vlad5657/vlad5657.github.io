@@ -1,12 +1,93 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="styles.css">
-  <title>My Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
 </head>
 <body>
-  <h1>Привет</h1>
-  <script src="script.js"></script>
+       <title>моя страница</title>
+ <head>       
+</body>
+    <h1>Репозиторий по GitHub</h1>
+     <button onclick="openTab('tab1')">1</button> 
+      <button onclick="openTab('tab2')">2</button>
+      <button onclick="openTab('tab3')">3</button>
+        <div id="tab1" class="tab-content" style="display: block;">
+            <h2>О себе</h2>
+            <p>Меня зовут влад я студент 1(курса)обучаюсь на програмиста в <strong>IThub</strong></p><div class="br">Изучаю языки как:
+                javaScript,PHP,Html,Css и js.Я начинающтй Frontend-разработчик
+            </div></p>
+              <img src="https://media.tenor.com/houU4l7hPYYAAAAm/dog-dance-dog-dance-meme.webp">
+        </div>
+
+        <div id="tab2" class="tab-content" style="display: none;">
+            <h2>Как владею языками</h2>
+            <p>JavaScript-junior<br>PHP-junior</p>
+            <p>Css-junior<br>Html-junior</p>
+            <p>Python-junior<br>TypeScript-junior</p> 
+        </div>
+
+            <div id="tab3" class="tab-content" style="display: none;">
+                <h2>Фетч запрос</h2>
+                <title>Показать картинку</title>
+                    <style>
+        
+        .container {
+            background: rgba(125, 94, 94, 0.334);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        img {
+            max-width: 100%;
+            margin-top: 20px;
+            border-radius: 10px;
+            display: none;
+        }
+        img.show {
+            display: block;
+            animation: fadeIn 0.1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="showImage()">кнопка</button>
+        <img id="myImage" src="" alt="Картинка">
+    </div>
+    
+    <script>
+        // ↓↓↓ СЮДА
+        const imageUrl = 'https://media.tenor.com/rvdvCpXlGRQAAAAM/rat-mouse.gif';
+        // ↑↑↑ СЮДА
+        
+        function showImage() {
+            const img = document.getElementById('myImage');
+            img.src = imageUrl;
+            img.classList.add('show');
+        }
+    </script>
 </body>
 </html>
+            </div>
+
+     <!-- <script src="script.js"></script> -->
+    <body>
+    </html>
+    <script>
+        function openTab(tabID){
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.style.display = 'none');
+            
+            document.getElementById(tabID).style.display = 'block';
+        }
+    </script>
+     
